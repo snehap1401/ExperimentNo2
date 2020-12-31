@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <script src="js/index.js"></script>
+    <title>RPC1</title>
+    </head>
+    <body style="background-color:white;width: 100%; overflow: auto;">
+        <center>
+        <div class="header1" style="font-weight: bold;color:white;font-family: Arial, Helvetica, sans-serif; background-color:#303030">Remote Method Invocation(RMI)</div>
+        </center>
+
+        <br><br>
+        <div class="btn">
+            
+        <button onclick="startClient();" id="startbtn1"; style="margin-left:5%; max-width:40%;font-size:2vw;color:#FFD700; background-color: #303030;"><b>Start Server</b></button>
+        <button onclick="startServer();" id="startbtn2"; style="margin-left:15%; max-width:40%;font-size:2vw;color:#FFD700; background-color: #303030;"><b>Start Client</b></button>
+
+        <button id="resetbtn" style="margin-left:90%; max-width:30%;font-size:1vw;background-color:#303030"><a href="index.html" style="color:#FFD700;text-decoration:none"><b>Reset</b></a></button>   
+    
+    </div>
+        
+
+        <div class="firstblock1">
+           <div id="commented">
+                <div class="codetext">
+                    <div class="serverprogram">
+                        <div id="line1" style="color:cornsilk; font-style: italic; size: 1em;"><center>/*Server Application*/</center></div><br>
+                        <div id="line2">import java.rmi.*;</div>
+                        <div id="line3">import java.rmi.server.*;</div>
+                        <div id="line4">import java.rmi.registry.*; </div>
+
+                        <br>
+                        <div id="line5">interface AddServerInterface extends Remote</div>
+                        <div class="codeComments" id="line5Comment" style="margin-left: 30%;">Remote interface</div>
+                            <div id="line6"> { </div>
+                            <div id="line7" style="margin-left: 6%;">int sum(int a,int b);</div>
+                            <div class="codeComments" id="line7Comment" style="margin-left: 30%;">methods that can be invoked remotely by a client</div>
+                            
+                            <div id="line8">} </div><br>
+                            <div id="line9">class Adder extends UnicastRemoteObject implements AddServerInterface</div>
+                            <div class="codeComments" id="line9Comment" style="margin-left: 30%;">implementation of remote interface</div>
+                            
+                            <div id="line10">{</div>
+                            <div id="line11"style="margin-left: 6%;">Adder(&nbsp;)throws RemoteException&nbsp;{</div>
+                            <div id="line12"style="margin-left: 6%;">super(&nbsp;);</div>
+                         <div id="line13">}</div>
+                         <div class="codeComments" id="line13Comment">Client Procedure</div>
+
+                        <div id="line14">public int sum(int a,int b)</div>
+                        <div id="line15">{</div>
+
+                        <div id="line16"style="margin-left: 6%;"> return a+b;</div>
+
+                        <div id="line17"> }</div>
+                        <div id="line18">}</div>
+                        <div id="line19">public class AddServer</div> 
+             
+                        <div id="line20">{ </div>
+                        <div id="line21"style="margin-left: 6%;">public static void main(String args[]) &nbsp;{</div>
+
+                        <div id="line22"style="margin-left: 8%;">try &nbsp;{</div>
+                        <div id="line23"style="margin-left: 9%;"> AddServerInterface addService=new Adder(&nbsp;);</div>
+                        <div id="line24"style="margin-left: 9%;">Naming.rebind("AddService",addService);</div>
+                        <div id="line25"style="margin-left: 6%;">}</div><br>
+
+                        <div id="line26"style="margin-left: 8%;">catch(Exception e) {</div><br>
+                        <div id="line27"style="margin-left: 9%;">System.out.println(e);</div>
+                        <div id="line28"style="margin-left: 9%;">}</div>
+
+                        <div id="line29"style="margin-left: 6%;">}</div>
+                        <div id="line30">}</div>
+                                 
+                    </div>
+                </div>
+           </div>
+        </div>
+        
+        
+
+
+        <div class="secondblock">
+          <div id="commented">
+              <div class="codetext">
+                  <div class="serverprogram">
+                <div id="server1" style="color:cornsilk; font-style: italic; size: 1em;"><center>/*Client Application*/</center></div><br>
+                <div id="server2">import java.rmi.*;</div>
+                <div class="codeComments" id="server2Comment">java.rmi package</div>
+                <br>
+
+                <div id="server3">public class Client</div>
+    
+                <div id="server4"> {</div>
+
+                <div id="server5"style="margin-left:4%"> public static void main(String args[]) &nbsp;{</div>
+                <div id="server6"style="margin-left:6%">try&nbsp;{</div><br>
+
+                <div id="server7"style="margin-left:8%">AddServerInterface st = (AddServerInterface)Naming.lookup("rmi://"+args[0]+"/AddService");</div>
+                <div class="codeComments" id="server7Comment" style="margin-left: 2%;">invokes the lookup() method of the Naming class.</div>
+                
+                <div id="server8"style="margin-left:8%">System.out.println(st.sum(25,15));</div>
+                <div id="server9"style="margin-left:6%">}</div>
+
+                <div id="server10"style="margin-left:6%">catch(Exception e) {</div>
+                <div id="server11"style="margin-left:8%">System.out.println(e);</div> 
+                
+                <div id="server12"style="margin-left:6%">}</div>
+                <div id="server13">}</div>
+                <div id="server14">}</div>
+               </div>
+        
+            </div>
+            </div>
+            </div>
+
+
+        <div class="thirdblock">
+            &nbsp;<div class="codetext">&nbsp;&nbsp;Command Prompt for Server</div><br>
+            <input type="text" id="executeServer1" class="textBox" placeholder="Start RMI registry" ><br>
+            <input type="text" id="executeServer2" class="textBox" placeholder="">
+            
+            <button onclick="executeServerBtn1()" class="outputButton" id="executeCmd">Execute</button>
+            <button onclick="executeServerBtn2()"class="outputButton"  id="executeCmd1" style="visibility: hidden;">Execute</button>
+
+            <br><br>
+            &nbsp;<div class="codetext" id="client" style="visibility: hidden;">&nbsp;&nbsp;Command Prompt for Client</div><br>
+            <input type="text" id="executeClient" class="textBox" placeholder="PortNo: 127.0.0.1"  style="visibility: hidden;"><br>
+            <br>&nbsp;&nbsp;&nbsp;<button onclick="executeClient1()"class="outputButton"  id="executeCmd3" style="visibility: hidden;">Execute</button>
+
+            <br>
+            &nbsp  <p style="visibility: hidden; color: white;" id="req" >>40 </p>
+             <br>
+            </div>
+            
+            </div> 
+       
+
+        </body>      
+    </html>

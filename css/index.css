@@ -1,0 +1,128 @@
+
+
+
+@media only screen and (min-width: 600px) {.header1 {
+	position: absolute;
+	top: 0;bottom: 0;left: 0;right: 0;
+	width: 100%;
+	height: 4vw;
+	font-size: 4vh;
+	padding-top: 1.3vmin;
+}
+}
+
+@media only screen and (min-width: 600px) {.btn{
+    position: absolute;
+    left: 0;right: 0;
+    width: 100%;
+    height: 3vw;
+    padding-top: 2vmin;
+    margin-top:3px;
+    background-color:whitesmoke;
+}
+}
+
+
+.codetext {
+    font-size: 1.2em;
+    color: white;
+    font-style: normal;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.codetext:hover {
+    transform: scale(0.7);
+
+}
+.commented{
+    visibility: hidden;
+}
+
+
+.codeComments{
+    display:inline-table;
+    background-color: aliceblue;
+    border-radius: 50%;
+    color: rgb(44, 11, 134);
+    padding : 0.3vw;
+    padding-left: 0.3vw;
+    padding-right: 0.6vw;
+    font-size: 1vw;  
+    margin-left: 20vw;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    visibility: hidden;
+    
+}
+
+.firstblock1{
+    position: absolute;
+    overflow:scroll;
+    left: 3%;
+    margin-top: 7vw;
+    width: 45vw;
+    padding-top: 3vmin;
+    /*height: 100%;*/
+    background-color:rgba(0, 0, 0, 0.76);
+    padding-bottom: 35%;
+    margin-bottom: -100%;
+    float: left;
+}
+
+
+
+@media only screen and (min-width: 10px) {.secondblock{
+    position: absolute;
+    overflow: auto;
+    margin-top: 7vw;
+    width: 45vw;
+    padding-top: 4vmin;
+    margin-left: 50%;
+    height: 0%;
+    background-color:rgba(0, 0, 0, 0.76);
+    padding-bottom: 20%;
+    margin-bottom: -100%;
+    float: left;
+}}
+
+@media only screen and (min-width: 10px) {.thirdblock {
+    position: absolute;
+    overflow: auto;
+    margin-top: 30vw;
+    width: 45vw;
+    padding-top: 3vmin;
+    margin-left: 50%;
+    height: 5%;
+    background-color: rgba(0, 0, 0, 0.76);
+    padding-bottom: 9%;
+    margin-bottom: -100%;
+    float: left;
+}
+}
+
+
+.serverprogram{
+    position: absolute;
+    margin-left: 5%;
+}
+
+#loc1{
+    margin-left: 30%;
+}
+
+.outputButton{
+    margin-left:5%;
+    max-width:50%;
+    font-size:1.2vw; 
+    border-radius: 100px;
+    color:#FFD700; 
+    background-color: #303030;
+}
+
+.textBox{
+    margin-left:15%; 
+    width:45%;
+    height:1.5vw;
+    font-size:1.2vw;
+     border-radius: 100px;
+}
