@@ -15,10 +15,9 @@
         <br><br>
         <div class="btn">
             
-        <button onclick="startClient();" id="startbtn1"; style="margin-left:5%; max-width:40%;font-size:2vw;color:#FFD700; background-color: #303030;"><b>Start Server</b></button>
-        <button onclick="startServer();" id="startbtn2"; style="margin-left:15%; max-width:40%;font-size:2vw;color:#FFD700; background-color: #303030;"><b>Start Client</b></button>
-
-        <button id="resetbtn" style="margin-left:90%; max-width:30%;font-size:1vw;background-color:#303030"><a href="index.html" style="color:#FFD700;text-decoration:none"><b>Reset</b></a></button>   
+        <button onclick="startClient();" id="startbtn1"; style="margin-left:3%; max-width:40%;font-size:2vw;color:#FFD700; background-color: #303030;"><b>Start Server</b></button>
+        <button onclick="startServer();" id="startbtn2"; style="margin-left:35%; max-width:40%;font-size:2vw;color:#FFD700; background-color: #303030;"><b>Start Client</b></button>
+        <button id="resetbtn" style="margin-left:25%; max-width:40%;font-size:1vw;background-color:#303030"><a href="index.html" style="color:#FFD700;text-decoration:none"><b>Reset</b></a></button>   
     
     </div>
         
@@ -118,16 +117,16 @@
 
         <div class="thirdblock">
             &nbsp;<div class="codetext">&nbsp;&nbsp;Command Prompt for Server</div><br>
-            <input type="text" id="executeServer1" class="textBox" placeholder="Start RMI registry" ><br>
-            <input type="text" id="executeServer2" class="textBox" placeholder="">
-            
+            <input type="text" id="executeServer1" class="textBox" placeholder="Start RMI registry" >
             <button onclick="executeServerBtn1()" class="outputButton" id="executeCmd">Execute</button>
+
+            <input type="text" id="executeServer2" class="textBox" placeholder="">
             <button onclick="executeServerBtn2()"class="outputButton"  id="executeCmd1" style="visibility: hidden;">Execute</button>
 
             <br><br>
             &nbsp;<div class="codetext" id="client" style="visibility: hidden;">&nbsp;&nbsp;Command Prompt for Client</div><br>
             <input type="text" id="executeClient" class="textBox" placeholder="PortNo: 127.0.0.1"  style="visibility: hidden;"><br>
-            <br>&nbsp;&nbsp;&nbsp;<button onclick="executeClient1()"class="outputButton"  id="executeCmd3" style="visibility: hidden;">Execute</button>
+            <button onclick="executeClient1()"class="outputButton"  id="executeCmd3" style="visibility: hidden;">Execute</button>
 
             <br>
             &nbsp  <p style="visibility: hidden; color: white;" id="req" >>40 </p>
