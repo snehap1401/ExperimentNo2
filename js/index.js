@@ -66,6 +66,8 @@ function executeClient1(){
 
 //code for RPC1
 function startClient() {
+    document.getElementById('startbtn2').style.visibility = "hidden";
+
     document.getElementById('commented').style.visibility = "visible";
     document.getElementById('startbtn1').innerHTML = "<b>Next</b>";
     executeCode1();
@@ -127,7 +129,7 @@ function executeCode1(){
 }
 
 function startServer() {
-
+    document.getElementById('startbtn1').style.visibility = "hidden";
     document.getElementById('commented').style.visibility = "visible";
     document.getElementById('startbtn2').innerHTML = "<b>Next</b>";
     executeCode2();
@@ -185,7 +187,7 @@ function executeCode2(){
     }
     if(line_no=='server14')
     {
-        alert("At End...")
+        alert("Reset to start again...")
     }
 }
 
