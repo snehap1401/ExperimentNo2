@@ -49,6 +49,7 @@ function executeServerBtn1(){
 }
 
 function executeClient1(){
+
     var ser3=document.getElementById('executeClient').value;
     var letters='java Client 127.0.0.1';
     if(ser3.match(letters))
@@ -64,7 +65,7 @@ function executeClient1(){
 
 
 
-//code for RPC1
+//code for RMI Server
 function startClient() {
     document.getElementById('startbtn2').style.visibility = "hidden";
 
